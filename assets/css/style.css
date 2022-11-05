@@ -1,0 +1,442 @@
+/* @import url("../../assets/css/ReadexPro-VariableFont_wght.ttf"); */
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600&display=swap");
+
+/************* root********* */
+:root {
+  --header-height: 3.5rem;
+  --main-color: #ff5a0e;
+  --sec-color: #ffb096;
+  --white-color: #fffef2;
+  --black-color: #3d3b3a;
+
+  /* ***************colors************** */
+  /* color mode hsl (hue,saturation,lightness) */
+  --first-hue: 250;
+  --second-hue: 219;
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+
+  /* ************font*********** */
+  --body-font: "Readex Pro", sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+}
+/* **************responsive************ */
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+  }
+}
+
+/* ************general style********** */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s;
+  direction: rtl;
+  text-align: right;
+}
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a.btn {
+  /* padding: 15px; */
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  margin: 10px;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+
+}
+
+/* *************header ************/
+.header {
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 70px;
+
+  padding-top: 10px;
+  background-color: var(--body-color);
+}
+.header h2 {
+  margin-bottom: 1.5rem;
+}
+.header .nav_menu i {
+  border: 1px solid white;
+  border-radius: 3px;
+  display: none;
+}
+
+.header li a {
+  display: block;
+  padding: 0px 10px;
+  font-size: 20px;
+  color: var(--white-color);
+}
+.header li a:hover {
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+@media screen and (max-width: 786px) {
+  .header .nav_menu i {
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+  .header ul {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    right: 0px;
+    flex-direction: column;
+    align-items: flex-start !important;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--sec-color);
+    z-index: 99;
+  }
+  .header li a {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .header li {
+    width: 100%;
+  }
+}
+.header ul.show {
+  opacity: 1;
+  visibility: visible;
+}
+/****** main ****/
+
+/************* home section***** */
+
+.home {
+  padding-top: 7rem;
+  position: relative;
+}
+.home-content {
+  z-index: 5;
+}
+.home .background {
+  background: linear-gradient(
+    200deg,
+    hsla(var(--first-hue), 100%, 100%, 1),
+    hsla(var(--first-hue), 100%, 100%, 2)
+  );
+  border-radius: 10rem 10rem 0px 0px;
+}
+.home i {
+  color: var(--text-color);
+}
+.particles-js-canvas-el {
+  position: absolute;
+  z-index: 41;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+@media (max-width:786px) {
+  .home i{
+    display: none;
+  }
+}
+
+/* *******************slider************ */
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  padding: 5px 10px;
+}
+.mySwiper{
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+
+  background: #fff;
+  /* height: 90%; */
+  
+  padding: 5px 10px;
+  overflow: hidden;
+  margin-left: 0px !important;
+  z-index: 3;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+ .image-content{
+  height: auto;
+  
+}
+
+
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  content: ""!important;
+}
+.bxs-right-arrow-alt:before,
+.bxs-left-arrow-alt:before {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+}
+.swiper-pagination-bullet {
+  background-color: var(--main-color);
+}
+
+    /** filter section */
+.filter{
+  color:var(--white-color)
+}
+.filter img{
+  height: 400px;
+}
+.filter-nav ul li{
+  cursor: pointer;
+}
+.filter-nav ul li.active{
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+/* image animation section */
+.animation img{
+  height: 400px;
+
+}
+.animation .animation-content{
+position: relative;
+width: 100%;
+overflow: hidden;
+
+
+}
+
+.animation .title{
+  position: absolute;
+  top:10px;
+  right: 35px;
+  padding: 10px;
+  background-color: var(--sec-color);
+}
+.animation .title::before,.animation .title::after{
+  content: "";
+  position: absolute;
+  width:700px;
+  height: 3px;
+  transition: 0.3s;
+  right: 0px;
+  transform: translate(100%);
+  background-color: red;
+  opacity: 0;
+}
+.animation .title::before{
+  top: 0px;
+}
+.animation .title::after{
+  bottom: 0px;
+}
+.animation .title div::before,.animation .title div::after{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 400px;
+ 
+ 
+ opacity: 0;
+  background-color: red;
+  transition: 0.3s;
+}
+.animation .title div::before{
+  right: 0px;
+  top: 0px;
+  transform: translate(0,100%);
+  
+}
+.animation .title div::after{
+ left:0px;
+ top: 59px;
+ transform: translate(0,-100%);
+}
+.animation .animation-content:hover .title div::before,
+
+.animation .animation-content:hover .title::before,
+.animation .animation-content:hover .title::after{
+  opacity: 1;
+  
+  transform: translate(0);
+}
+.animation .animation-content:hover .title div::after{
+  opacity: 1;
+  
+}
+.animation .animation-content:hover{
+  filter: opacity(.5);
+
+}
+
+
+/* crud section */
+.crud .content{
+  position: relative;
+}
+.crud input{
+  width: 100%;
+color: var(--white-color);
+  border-radius: 30px;
+  padding:15px 5px;
+ border: 1px solid var(--black-color);
+background-color: transparent;
+ 
+}
+.crud .content h4{
+  position: absolute;
+  border: 1px solid var(--black-color);
+  top:-20px;
+  color: var(--black-color);
+  background-color: var(--body-color);
+  padding:5px 20px;
+  border-radius: 30px;
+  right: 60px;
+  font-size: 20px;
+ 
+}
+.crud .btn{
+padding: 2px 20px;
+background-color: var(--main-color);
+border-radius: 30px;
+color: var(--white-color);
+width: 100px;
+
+}
+.crud table{
+  width: 80%;
+  margin: auto;
+  border: 1px solid var(--black-color);
+}
+.crud table tbody tr td,.crud table th{
+  padding: 10px 20px;
+  text-align: center;
+ 
+}
+.crud table th,tr{
+  border: 1px solid var(--black-color);
+}
+.crud table tbody tr td:first-child{
+  width: 30px;
+}
+.crud table thead,.crud table tbody tr td:first-child{
+  background-color: var(--main-color);
+}
+
+/* contact form */
+.form #record{
+  width: fit-content;
+  background-color: var(--main-color);
+  border-radius: 30px;
+color: var(--white-color);
+}
+.form .text{
+  width: 500px;
+  height: 400px;
+  background-color: var(--white-color);
+ 
+}
+.form .btn{
+  padding: 2px 20px;
+  background-color: var(--main-color);
+  border-radius: 30px;
+  color: var(--white-color);
+  width: 100px;
+  
+  }
+
+  /* light mod */
+  .light{
+    --white-color: #3d3b3a;
+    
+  --black-color:  #fffef2;
+
+    --title-color:  #3d3b3a;
+    --text-color:  #3d3b3a;
+    --body-color:  #fffef2;
+  
+  }
+
+  /* search section */
+  .search input{
+    outline: none;
+    border-radius: 30px;
+  }
+  .search .content{
+    background-color: var(--white-color);
+    color:var(--black-color)
+  }
+  
+
+  /* cart section */
+  .cart .haed-content{
+    border: 2px solid red;
+    position: relative;
+  }
+  .cart #total{
+    background-color: red;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top:10px;
+    right: 10px;
+  }
+
+
+  /* not found */
+  .not-found{
+    position: relative;
+    z-index: 30;
+  }
+  .not-found .content{
+    flex-direction: column;
+   
+    height: 100vh;
+  }
+  .not-found p{
+    width: 500px;
+  }
+ .not-found #returnHome{
+    cursor: pointer;
+  }
