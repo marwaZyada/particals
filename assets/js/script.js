@@ -93,9 +93,19 @@ btn.onclick = () => {
     place: place.value
   };
   if(place.value!=""&&price.value!=""){
+   if(parseInt(price.value)>5000 ||parseInt(price.value)<0){
+    alert("you should enter number>0 and <5000")
+   }
+   else{
     if(flag=="add"){
+     
     products.push(data);
-    }
+      }
+   
+  
+    
+
+  
     else{
       console.log(products[index])
       products[index].price=price.value
@@ -107,9 +117,14 @@ btn.onclick = () => {
     btn.innerHTML="إضافة"
     flag="add"
     }
+  }
+  
+ 
+  
+}
     
    
-  }
+  
   else{
     return null
   }
